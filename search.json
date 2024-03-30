@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "scoring.html",
+    "href": "scoring.html",
+    "title": "scoring",
+    "section": "",
+    "text": "source\n\nscore\n\n score (data)",
+    "crumbs": [
+      "scoring"
+    ]
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core (demo module)",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()",
+    "crumbs": [
+      "core (demo module)"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ballroom_analysis",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "ballroom_analysis"
+    ]
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "ballroom_analysis",
+    "section": "Install",
+    "text": "Install\npip install ballroom_analysis",
+    "crumbs": [
+      "ballroom_analysis"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "ballroom_analysis",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "ballroom_analysis"
+    ]
+  }
+]
