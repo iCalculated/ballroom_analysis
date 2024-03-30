@@ -2,11 +2,58 @@
   {
     "objectID": "core.html",
     "href": "core.html",
-    "title": "core",
+    "title": "core (demo module)",
     "section": "",
-    "text": "foo\n\n foo ()",
+    "text": "source\n\nfoo\n\n foo ()",
     "crumbs": [
-      "core"
+      "core (demo module)"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ballroom_analysis",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "ballroom_analysis"
+    ]
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "ballroom_analysis",
+    "section": "Install",
+    "text": "Install\npip install ballroom_analysis",
+    "crumbs": [
+      "ballroom_analysis"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "ballroom_analysis",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "ballroom_analysis"
+    ]
+  },
+  {
+    "objectID": "scoring.html",
+    "href": "scoring.html",
+    "title": "scoring",
+    "section": "",
+    "text": "source\n\nscore\n\n score (data)",
+    "crumbs": [
+      "scoring"
+    ]
+  },
+  {
+    "objectID": "main.html",
+    "href": "main.html",
+    "title": "ballroom_analysis",
+    "section": "",
+    "text": "SCORES = [30, 25, 20, 15, 10, 5, 0, 0]\nCALLBACK_VALUE = 3 \nINT = type(0)\n\ndef score(data):\n    # single-event\n    if type(data[0]) == INT:\n        print(\"detected single-event\")\n        data = [data]\n\n    # event-wise\n    if len(data[0]) == 3:\n        print(\"calculating event-wise score\")\n        return sum(SCORES[place-1] * mult + callbacks * 3 for (place, mult, callbacks) in data)\n    # matrix\n    else:\n        print(\"calculating overall score\")\n        placements, mults, callbacks = data\n        callback_contrib = (callbacks if type(callbacks) == INT else sum(callbacks)) * CALLBACK_VALUE \n        placement_contribs =  sum([SCORES[place - 1] * mult for (place, mult) in zip(placements, mults)])\n        return callback_contrib + placement_contribs\n\n\n\nscore([1,3,2])\n\ndetected single-event\ndetected event-wise data\n\n\n96\n\n\n\ntype(0)\n\ntype"
   }
 ]

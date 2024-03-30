@@ -2,6 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://iCalculated.github.io/ballroom_analysis/core.html</loc>
-    <lastmod>2024-03-30T18:21:14.241Z</lastmod>
+    <lastmod>2024-03-30T18:28:31.380Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iCalculated.github.io/ballroom_analysis/index.html</loc>
+    <lastmod>2024-03-30T18:21:14.264Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iCalculated.github.io/ballroom_analysis/scoring.html</loc>
+    <lastmod>2024-03-30T18:32:36.745Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iCalculated.github.io/ballroom_analysis/main.html</loc>
+    <lastmod>2024-03-30T18:26:07.277Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iCalculated.github.io/ballroom_analysis/scraping.html</loc>
+    <lastmod>2024-03-30T18:34:16.812Z</lastmod>
   </url>
 </urlset>

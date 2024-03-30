@@ -5,4 +5,5 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://iCalculated.github.io',
                 'git_url': 'https://github.com/iCalculated/ballroom_analysis',
                 'lib_path': 'ballroom_analysis'},
-  'syms': {'ballroom_analysis.core': {'ballroom_analysis.core.foo': ('core.html#foo', 'ballroom_analysis/core.py')}}}
+  'syms': { 'ballroom_analysis.core': {'ballroom_analysis.core.foo': ('core.html#foo', 'ballroom_analysis/core.py')},
+            'ballroom_analysis.scoring': {'ballroom_analysis.scoring.score': ('scoring.html#score', 'ballroom_analysis/scoring.py')}}}
