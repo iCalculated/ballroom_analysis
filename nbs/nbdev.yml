@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "ballroom_analysis"
+  site-url: "https://iCalculated.github.io/ballroom_analysis"
+  description: "investigative journalism"
+  repo-branch: main
+  repo-url: "https://github.com/iCalculated/ballroom_analysis"
