@@ -5,8 +5,14 @@ __all__ = ['event_names', 'headers', 'soup', 'events', 'Event', 'parse_event_nam
            'extract_events_from_html', 'Result', 'extract_max_callbacks', 'extract_placement', 'extract_num_dances',
            'get_event_result']
 
+# %% ../nbs/02_scraping.ipynb 3
+import requests
+from bs4 import BeautifulSoup
+from typing import List, Tuple, NamedTuple
+
 # %% ../nbs/02_scraping.ipynb 4
 class Event(NamedTuple):
+    # comment
     division: str
     level: str
     event: str
@@ -132,11 +138,11 @@ def get_event_result(name: str, url: str) -> Result:
         return Result(callbacks=possible_callbacks, placement=place, num_dances=num_dances)
 
 
-    url = "https://results.o2cm.com/scoresheet3.asp"
+    base_url = "https://results.o2cm.com/scoresheet3.asp"
     # CR shy: binary search eventually
     for selector in range(1, possible_callbacks + 1):
         data["selCount"] = selector
-        response = session.post(url, data=data)
+        response = session.post(base_url, data=data)
 
         # Process the response
         soup = BeautifulSoup(response.content, 'html.parser')
