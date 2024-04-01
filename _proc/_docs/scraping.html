@@ -185,6 +185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#get" id="toc-get" class="nav-link" data-scroll-target="#get">get</a></li>
   <li><a href="#extract_events_from_html" id="toc-extract_events_from_html" class="nav-link" data-scroll-target="#extract_events_from_html">extract_events_from_html</a></li>
   <li><a href="#result" id="toc-result" class="nav-link" data-scroll-target="#result">Result</a></li>
+  <li><a href="#extract_num_dances" id="toc-extract_num_dances" class="nav-link" data-scroll-target="#extract_num_dances">extract_num_dances</a></li>
   <li><a href="#extract_placement" id="toc-extract_placement" class="nav-link" data-scroll-target="#extract_placement">extract_placement</a></li>
   <li><a href="#extract_max_callbacks" id="toc-extract_max_callbacks" class="nav-link" data-scroll-target="#extract_max_callbacks">extract_max_callbacks</a></li>
   <li><a href="#get_event_result" id="toc-get_event_result" class="nav-link" data-scroll-target="#get_event_result">get_event_result</a></li>
@@ -258,7 +259,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="result" class="level3">
 <h3 class="anchored" data-anchor-id="result">Result</h3>
 <blockquote class="blockquote">
-<pre><code> Result (callbacks:int, placement:float|None)</code></pre>
+<pre><code> Result (callbacks:int, placement:float|None, num_dances:int=1)</code></pre>
+</blockquote>
+<hr>
+</section>
+<section id="extract_num_dances" class="level3">
+<h3 class="anchored" data-anchor-id="extract_num_dances">extract_num_dances</h3>
+<blockquote class="blockquote">
+<pre><code> extract_num_dances (soup:bs4.BeautifulSoup)</code></pre>
 </blockquote>
 <hr>
 </section>
@@ -275,15 +283,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <pre><code> extract_max_callbacks (soup:bs4.BeautifulSoup)</code></pre>
 </blockquote>
-<div id="cell-10" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://results.o2cm.com/scoresheet3.asp?event=usa24&amp;heatid=40423019"</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Khalid Ali"</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>initial_res <span class="op">=</span> get(url)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(initial_res.content, <span class="st">"html.parser"</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>extract_placement(soup, name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
+<div id="cell-11" class="cell" data-execution_count="54">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://results.o2cm.com/scoresheet3.asp?event=usa24&amp;heatid=40423019"</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Khalid Ali"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>initial_res <span class="op">=</span> get(url)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(initial_res.content, <span class="st">"html.parser"</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>extract_placement(soup, name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="54">
 <pre><code>3.5</code></pre>
 </div>
 </div>
@@ -294,37 +302,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <pre><code> get_event_result (name:str, url:str)</code></pre>
 </blockquote>
-<div id="cell-12" class="cell" data-execution_count="48">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Tessa Lundheim"</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> get_event_list_html(name)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>events <span class="op">=</span> extract_events_from_html(soup)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-13" class="cell" data-execution_count="56">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Irena Wilson"</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> get_event_list_html(name)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>events <span class="op">=</span> extract_events_from_html(soup)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-13" class="cell" data-execution_count="49">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> event_name, event_url <span class="kw">in</span> events:</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> get_event_result(name, event_url)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> result.placement:</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"In </span><span class="sc">{</span>event_name<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>name<span class="sc">.</span>split()[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> got </span><span class="sc">{</span>result<span class="sc">.</span>callbacks<span class="sc">}</span><span class="ss"> callbacks and placed </span><span class="sc">{</span>result<span class="sc">.</span>placement<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"In </span><span class="sc">{</span>event_name<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>name<span class="sc">.</span>split()[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> got </span><span class="sc">{</span>result<span class="sc">.</span>callbacks<span class="sc">}</span><span class="ss"> callbacks"</span>)</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"No result for </span><span class="sc">{</span>event_name<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-14" class="cell" data-execution_count="57">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> event_name, event_url <span class="kw">in</span> events:</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> get_event_result(name, event_url)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> result.placement:</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"In </span><span class="sc">{</span>event_name<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>name<span class="sc">.</span>split()[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> got </span><span class="sc">{</span>result<span class="sc">.</span>callbacks<span class="sc">}</span><span class="ss"> callbacks and placed </span><span class="sc">{</span>result<span class="sc">.</span>placement<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span>result<span class="sc">.</span>num_dances<span class="sc">}</span><span class="ss"> dances)"</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"In </span><span class="sc">{</span>event_name<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>name<span class="sc">.</span>split()[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> got </span><span class="sc">{</span>result<span class="sc">.</span>callbacks<span class="sc">}</span><span class="ss"> callbacks (</span><span class="sc">{</span>result<span class="sc">.</span>num_dances<span class="sc">}</span><span class="ss"> dances)"</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"No result for </span><span class="sc">{</span>event_name<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>In Amateur Adult Pre-Bronze Latin, Tessa got 0 callbacks and placed 2.0
-In Amateur Collegiate Bronze Rhythm, Tessa got 1 callbacks
-In Amateur Collegiate Bronze 1 Rhythm, Tessa got 1 callbacks
-In Amateur Adult Bronze Rhythm, Tessa got 3 callbacks and placed 1.0
-In Amateur Adult Bronze 1 Rhythm, Tessa got 3 callbacks and placed 1.0
-In Amateur Collegiate Bronze Standard, Tessa got 1 callbacks
-In Amateur Collegiate Bronze 1 Standard, Tessa got 2 callbacks
-In Amateur Adult Bronze Standard, Tessa got 3 callbacks and placed 6.0
-In Amateur Adult Bronze 1 Standard, Tessa got 3 callbacks and placed 6.0
-In Amateur Collegiate Bronze Smooth, Tessa got 1 callbacks
-In Amateur Collegiate Bronze 1 Smooth, Tessa got 1 callbacks
-In Amateur Adult Bronze 1 Smooth, Tessa got 3 callbacks and placed 1.0
-In Amateur Adult Bronze Smooth, Tessa got 3 callbacks and placed 3.0
-In Amateur Collegiate Pre-Bronze Latin, Tessa got 1 callbacks and placed 3.0</code></pre>
+<pre><code>In Amateur Adult Pre-Bronze Latin, Irena got 0 callbacks and placed 2.0 (2 dances)
+In Amateur Collegiate Bronze Rhythm, Irena got 3 callbacks and placed 6.0 (2 dances)
+In Amateur Collegiate Bronze 1 Rhythm, Irena got 3 callbacks and placed 4.0 (2 dances)
+In Amateur Adult Bronze Rhythm, Irena got 3 callbacks and placed 1.0 (2 dances)
+In Amateur Adult Bronze 1 Rhythm, Irena got 3 callbacks and placed 1.0 (2 dances)
+In Amateur Adult Bronze Standard, Irena got 3 callbacks and placed 6.0 (2 dances)
+In Amateur Adult Bronze 1 Standard, Irena got 3 callbacks and placed 6.0 (2 dances)
+In Amateur Adult Novice Standard, Irena got 2 callbacks and placed 5.0 (3 dances)
+In Amateur Adult Pre-Champ Standard, Irena got 1 callbacks and placed 7.0 (4 dances)
+In Amateur Collegiate Bronze Smooth, Irena got 3 callbacks and placed 7.0 (2 dances)
+In Amateur Collegiate Bronze 1 Smooth, Irena got 2 callbacks (1 dances)
+In Amateur Adult Bronze 1 Smooth, Irena got 3 callbacks and placed 1.0 (1 dances)
+In Amateur Adult Bronze Smooth, Irena got 3 callbacks and placed 3.0 (2 dances)</code></pre>
 </div>
 </div>
 
