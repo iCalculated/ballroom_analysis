@@ -294,41 +294,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <pre><code> get_event_result (name:str, url:str)</code></pre>
 </blockquote>
-<div id="cell-12" class="cell" data-execution_count="23">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> get_event_list_html(<span class="st">"Khalid Ali"</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>events <span class="op">=</span> extract_events_from_html(soup)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-12" class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Tessa Lundheim"</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> get_event_list_html(name)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>events <span class="op">=</span> extract_events_from_html(soup)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-13" class="cell" data-execution_count="26">
+<div id="cell-13" class="cell" data-execution_count="49">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> event_name, event_url <span class="kw">in</span> events:</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> get_event_result(<span class="st">"Khalid Ali"</span>, event_url)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> get_event_result(name, event_url)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> result.placement:</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"In </span><span class="sc">{</span>event_name<span class="sc">}</span><span class="ss">, Khalid got </span><span class="sc">{</span>result<span class="sc">.</span>callbacks<span class="sc">}</span><span class="ss"> callbacks and placed </span><span class="sc">{</span>result<span class="sc">.</span>placement<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"In </span><span class="sc">{</span>event_name<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>name<span class="sc">.</span>split()[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> got </span><span class="sc">{</span>result<span class="sc">.</span>callbacks<span class="sc">}</span><span class="ss"> callbacks and placed </span><span class="sc">{</span>result<span class="sc">.</span>placement<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"In </span><span class="sc">{</span>event_name<span class="sc">}</span><span class="ss">, Khalid got </span><span class="sc">{</span>result<span class="sc">.</span>callbacks<span class="sc">}</span><span class="ss"> callbacks"</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"In </span><span class="sc">{</span>event_name<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>name<span class="sc">.</span>split()[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> got </span><span class="sc">{</span>result<span class="sc">.</span>callbacks<span class="sc">}</span><span class="ss"> callbacks"</span>)</span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"No result for </span><span class="sc">{</span>event_name<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>In Amateur Collegiate Gold Standard, Khalid got 0 callbacks
-In Amateur Collegiate Silver Rhythm, Khalid got 0 callbacks
-In Amateur Collegiate Gold Rhythm, Khalid got 0 callbacks and placed 6.0
-In Amateur Adult Silver Rhythm, Khalid got 1 callbacks
-In Amateur Collegiate Silver Standard, Khalid got 2 callbacks and placed 2.0
-In Amateur Collegiate Silver Intl. Tango, Khalid got 2 callbacks and placed 3.0
-In Amateur Collegiate All Syllabus Standard, Khalid got 2 callbacks and placed 4.0
-In Amateur Adult Silver Intl. V. Waltz, Khalid got 1 callbacks
-In Amateur Adult Silver Standard, Khalid got 2 callbacks and placed 3.0
-In Amateur Adult Silver Intl. Tango, Khalid got 2 callbacks and placed 3.5
-In Amateur Collegiate Silver Smooth, Khalid got 2 callbacks
-In Amateur Adult Gold Smooth, Khalid got 2 callbacks and placed 2.0
-In Amateur Collegiate Gold Smooth, Khalid got 1 callbacks and placed 1.0
-In Amateur Adult Novice Smooth, Khalid got 2 callbacks and placed 3.0
-In Amateur Adult Silver Latin, Khalid got 0 callbacks
-In Amateur Collegiate Silver Latin, Khalid got 1 callbacks
-In Amateur Collegiate Bronze Latin, Khalid got 2 callbacks
-In Amateur Adult Bronze 1 Latin, Khalid got 1 callbacks
-In Amateur Adult Bronze Latin, Khalid got 2 callbacks</code></pre>
+<pre><code>In Amateur Adult Pre-Bronze Latin, Tessa got 0 callbacks and placed 2.0
+In Amateur Collegiate Bronze Rhythm, Tessa got 1 callbacks
+In Amateur Collegiate Bronze 1 Rhythm, Tessa got 1 callbacks
+In Amateur Adult Bronze Rhythm, Tessa got 3 callbacks and placed 1.0
+In Amateur Adult Bronze 1 Rhythm, Tessa got 3 callbacks and placed 1.0
+In Amateur Collegiate Bronze Standard, Tessa got 1 callbacks
+In Amateur Collegiate Bronze 1 Standard, Tessa got 2 callbacks
+In Amateur Adult Bronze Standard, Tessa got 3 callbacks and placed 6.0
+In Amateur Adult Bronze 1 Standard, Tessa got 3 callbacks and placed 6.0
+In Amateur Collegiate Bronze Smooth, Tessa got 1 callbacks
+In Amateur Collegiate Bronze 1 Smooth, Tessa got 1 callbacks
+In Amateur Adult Bronze 1 Smooth, Tessa got 3 callbacks and placed 1.0
+In Amateur Adult Bronze Smooth, Tessa got 3 callbacks and placed 3.0
+In Amateur Collegiate Pre-Bronze Latin, Tessa got 1 callbacks and placed 3.0</code></pre>
 </div>
 </div>
 
