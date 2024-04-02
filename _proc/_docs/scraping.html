@@ -190,6 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#extract_placement" id="toc-extract_placement" class="nav-link" data-scroll-target="#extract_placement">extract_placement</a></li>
   <li><a href="#extract_max_callbacks" id="toc-extract_max_callbacks" class="nav-link" data-scroll-target="#extract_max_callbacks">extract_max_callbacks</a></li>
   <li><a href="#get_event_result" id="toc-get_event_result" class="nav-link" data-scroll-target="#get_event_result">get_event_result</a></li>
+  <li><a href="#get_scoresheet" id="toc-get_scoresheet" class="nav-link" data-scroll-target="#get_scoresheet">get_scoresheet</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/iCalculated/ballroom_analysis/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -310,7 +311,188 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="get_event_result" class="level3">
 <h3 class="anchored" data-anchor-id="get_event_result">get_event_result</h3>
 <blockquote class="blockquote">
-<pre><code> get_event_result (name:str, url:str)</code></pre>
+<pre><code> get_event_result (name:str, url:str, scoresheet_cache={'https://results.o
+                   2cm.com/scoresheet3.asp?event=usa24&amp;heatid=40423019':
+                   &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+                   Strict//EN"
+                   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+                   &lt;html xml:lang="en"
+                   xmlns="http://www.w3.org/1999/xhtml"&gt; &lt;meta
+                   content="noindex, nofollow" name="robots"/&gt; &lt;head&gt;
+                   &lt;link href="compdb.css" rel="stylesheet"/&gt; &lt;style
+                   type="text/css"&gt;              .h1 {color:#000000}
+                   .h2 {color:#000000}              .h4 {color:#000000}
+                   .h5n {color:#000000}              .h5b {color:#000000}
+                   .t1n {color:#000000}              .t1b {color:#000000}
+                   .t2n {color:#000000}              .t2b {color:#000000}
+                   &lt;/style&gt; &lt;script type="text/javascript"&gt;
+                   function MM_findObj(name) {
+                   var i,obj=document[name];
+                   if (!obj &amp;&amp; document.all)
+                   obj=document.all[name];
+                   if (!obj &amp;&amp; document.getElementById)
+                   obj = document.getElementById(name);
+                   if (!obj &amp;&amp; document.layers)
+                   obj=document.layers[name];
+                   if (!obj &amp;&amp; document.forms)
+                   for (i=0;!obj&amp;&amp;i&lt;document.forms.length;i++)
+                   obj=document.forms[i][name];
+                   return obj;                          }
+                   function MyWindowPrint()                          {
+                   document.body.bgColor="white";
+                   document.body.background="none";
+                   window.print();
+                   document.body.background="../images/bkgd.gif";
+                   document.body.bgColor=="#cccccc";
+                   }
+                   function OnResize()                          {
+                   var winW = 630, winH = 460;
+                   if (document.body &amp;&amp; document.body.offsetWidth) {
+                   winW = document.body.offsetWidth;
+                   winH = document.body.offsetHeight;
+                   }                                  if
+                   (document.compatMode=='CSS1Compat' &amp;&amp;
+                   document.documentElement &amp;&amp;
+                   document.documentElement.offsetWidth ) {
+                   winW = document.documentElement.offsetWidth;
+                   winH = document.documentElement.offsetHeight;
+                   }                                  if
+                   (window.innerWidth &amp;&amp; window.innerHeight) {
+                   winW = window.innerWidth;
+                   winH = window.innerHeight;
+                   }                          }
+                   &lt;/script&gt; &lt;/head&gt; &lt;body alink="#000000"
+                   bgcolor="#FFFFFF" class="t1n" link="#000000"
+                   onload="OnResize();" onresize="OnResize();"
+                   text="#000000" vlink="#0000cc"&gt; &lt;form
+                   action="scoresheet3.asp" method="post"
+                   name="selectRound"&gt; &lt;table width="600"&gt; &lt;tr&gt;&lt;/tr&gt;&lt;td
+                   align="center" class="h1" valign="top"&gt;USA DANCE
+                   National DanceSport Championships 2024
+                   &lt;input id="heatid" name="heatid" type="hidden"
+                   value="40423019"/&gt; &lt;input id="event" name="event"
+                   type="hidden" value="usa24"/&gt; &lt;/td&gt; &lt;tr&gt;&lt;td
+                   align="center" class="h4" valign="middle"&gt;Amateur Adult
+                   Silver Intl. Tango&nbsp;
+                   &lt;select class="h4" id="selCount" name="selCount"
+                   onchange="document.forms.selectRound.submit()"&gt; &lt;option
+                   selected="" value="0"&gt;Final&lt;/option&gt; &lt;option
+                   value="1"&gt;Semi-Final&lt;/option&gt; &lt;option
+                   value="2"&gt;Quarter-Final&lt;/option&gt; &lt;/select&gt; &lt;/td&gt; &lt;td&gt;
+                   &lt;input onclick="MyWindowPrint()" type="button" value="
+                   Print "/&gt; &lt;/td&gt; &lt;/tr&gt;&lt;/table&gt; &lt;/form&gt; &lt;table
+                   class="t1n" width="650"&gt;&lt;tr&gt;&lt;td align="center"
+                   class="h3" colspan="16"&gt;Intl. Tango&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t1b" width="60"&gt;&nbsp;&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t1b" width="20"&gt;10&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t1b" width="20"&gt;18&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t1b" width="20"&gt;23&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t1b" width="20"&gt;24&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t1b" width="20"&gt;26&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t1b" width="20"&gt;29&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t1b" width="20"&gt;31&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" width="20"&gt;&nbsp;&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t2b" width="50"&gt;1&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t2b" width="50"&gt;1-2&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t2b" width="50"&gt;1-3&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t2b" width="50"&gt;1-4&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t2b" width="50"&gt;1-5&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t2b" width="50"&gt;1-6&lt;/td&gt;&lt;td
+                   bgcolor="#CCCCCC" class="t1b" width="40"&gt;P&lt;/td&gt;&lt;td
+                   width="150"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="t1b"&gt;402&lt;/td&gt;&lt;td&gt;1
+                   &lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;
+                   &lt;td&gt;1&lt;/td&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/t
+                   d&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td c
+                   lass="t1b"&gt;552&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;2&lt;
+                   /td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;t
+                   d&gt;7&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;
+                   td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td class="t1b"&gt;260&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;t
+                   d&gt;4&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;4&lt;/
+                   td&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;4&lt;sup&gt;(15)
+                   &lt;/sup&gt;&lt;/td&gt;&lt;td&gt;6&lt;sup&gt;(25)&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;7&lt;sup&gt;(31)&lt;/sup
+                   &gt;&lt;/td&gt;&lt;td&gt;3.5&lt;/td&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td class="t1b"&gt;5
+                   28&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;3&lt;/t
+                   d&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;1
+                   &lt;/td&gt;&lt;td&gt;4&lt;sup&gt;(15)&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;6&lt;sup&gt;(25)&lt;/sup&gt;&lt;/td&gt;
+                   &lt;td&gt;7&lt;sup&gt;(31)&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;3.5&lt;/td&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt;
+                   &lt;tr&gt;&lt;td class="t1b"&gt;513&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;5&lt;/
+                   td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;t
+                   d&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;&lt;/td&gt;
+                   &lt;td&gt;5&lt;/td&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td class="t1b"&gt;318&lt;/td&gt;&lt;
+                   td&gt;6&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;6&lt;
+                   /td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td
+                   &gt;3&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt;
+                   &lt;/table&gt;&lt;br/&gt;&lt;table class="t1n" width="400"&gt;&lt;tr&gt;&lt;td
+                   width="60"&gt;&nbsp;&lt;/td&gt;&lt;td class="t1b"
+                   width="340"&gt;Couples&lt;/td&gt;&lt;tr&gt;&lt;td
+                   class="t1b"&gt;260&lt;/td&gt;&lt;td&gt;&lt;a href="https://results.o2cm.c
+                   om/individual.asp?szLast=Lin&amp;amp;szFirst=Zeyu"
+                   target="_blank"&gt;Zeyu Lin&lt;/a&gt;, &lt;a href="https://results.
+                   o2cm.com/individual.asp?szLast=Perelmutor&amp;amp;szFirst=M
+                   ichelle" target="_blank"&gt;Michelle Perelmutor&lt;/a&gt; -
+                   &lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td class="t1b"&gt;318&lt;/td&gt;&lt;td&gt;&lt;a href="https
+                   ://results.o2cm.com/individual.asp?szLast=Chow&amp;amp;szFi
+                   rst=Matthew" target="_blank"&gt;Matthew Chow&lt;/a&gt;, &lt;a href=
+                   "https://results.o2cm.com/individual.asp?szLast=Gordill
+                   o&amp;amp;szFirst=Vanessa" target="_blank"&gt;Vanessa
+                   Gordillo&lt;/a&gt; - NM&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td
+                   class="t1b"&gt;402&lt;/td&gt;&lt;td&gt;&lt;a href="https://results.o2cm.c
+                   om/individual.asp?szLast=Razmus&amp;amp;szFirst=Alyssa"
+                   target="_blank"&gt;Alyssa Razmus&lt;/a&gt;, &lt;a href="https://res
+                   ults.o2cm.com/individual.asp?szLast=Matviienko&amp;amp;szFi
+                   rst=Daria" target="_blank"&gt;Daria Matviienko&lt;/a&gt; -
+                   CA&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td class="t1b"&gt;513&lt;/td&gt;&lt;td&gt;&lt;a href="htt
+                   ps://results.o2cm.com/individual.asp?szLast=Kuntoro&amp;amp
+                   ;szFirst=Catherine" target="_blank"&gt;Catherine
+                   Kuntoro&lt;/a&gt;, &lt;a href="https://results.o2cm.com/individu
+                   al.asp?szLast=Guha&amp;amp;szFirst=Uditi"
+                   target="_blank"&gt;Uditi Guha&lt;/a&gt; - CA&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td
+                   class="t1b"&gt;528&lt;/td&gt;&lt;td&gt;&lt;a href="https://results.o2cm.c
+                   om/individual.asp?szLast=Ali&amp;amp;szFirst=Khalid"
+                   target="_blank"&gt;Khalid Ali&lt;/a&gt;, &lt;a href="https://result
+                   s.o2cm.com/individual.asp?szLast=Schultz&amp;amp;szFirst=Ca
+                   rmen" target="_blank"&gt;Carmen Schultz&lt;/a&gt; -
+                   MN&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td class="t1b"&gt;552&lt;/td&gt;&lt;td&gt;&lt;a href="htt
+                   ps://results.o2cm.com/individual.asp?szLast=Leal&amp;amp;sz
+                   First=Mark" target="_blank"&gt;Mark Leal&lt;/a&gt;, &lt;a href="htt
+                   ps://results.o2cm.com/individual.asp?szLast=Garg&amp;amp;sz
+                   First=Swati" target="_blank"&gt;Swati Garg&lt;/a&gt; -
+                   CA&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td width="60"&gt;&nbsp;&lt;/td&gt;&lt;td class="t1b"
+                   width="340"&gt;&nbsp;&lt;/td&gt;&lt;tr&gt;&lt;td width="60"&gt;&nbsp;&lt;/td&gt;&lt;td
+                   class="t1b" width="340"&gt;Judges&lt;/td&gt;&lt;tr&gt;&lt;td
+                   class="t1b"&gt;10&lt;/td&gt;&lt;td&gt;Carmen &lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td
+                   class="t1b"&gt;18&lt;/td&gt;&lt;td&gt;Jami Josephson-
+                   Chace&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td class="t1b"&gt;23&lt;/td&gt;&lt;td&gt;Lesya
+                   Sinitsa&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td class="t1b"&gt;24&lt;/td&gt;&lt;td&gt;Karina
+                   Smirnoff&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td
+                   class="t1b"&gt;26&lt;/td&gt;&lt;td&gt;Salvatore Todaro&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td
+                   class="t1b"&gt;29&lt;/td&gt;&lt;td&gt;Ashli Williamson&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td
+                   class="t1b"&gt;31&lt;/td&gt;&lt;td&gt;Christine Zona&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td
+                   width="60"&gt;&nbsp;&lt;/td&gt;&lt;td class="t1b"
+                   width="340"&gt;Chairperson&lt;/td&gt;&lt;tr&gt;&lt;td
+                   class="t1b"&gt;&lt;/td&gt;&lt;td&gt;Yuehwern Yih&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td
+                   width="60"&gt;&nbsp;&lt;/td&gt;&lt;td class="t1b"
+                   width="340"&gt;Chairperson&lt;/td&gt;&lt;tr&gt;&lt;td
+                   class="t1b"&gt;&lt;/td&gt;&lt;td&gt;Daniel Calloway&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td
+                   width="60"&gt;&nbsp;&lt;/td&gt;&lt;td class="t1b"
+                   width="340"&gt;Scrutineer&lt;/td&gt;&lt;tr&gt;&lt;td
+                   class="t1b"&gt;&lt;/td&gt;&lt;td&gt;Daniel Dilley&lt;/td&gt;&lt;tr&gt;&lt;tr&gt;&lt;td
+                   width="60"&gt;&nbsp;&lt;/td&gt;&lt;td class="t1b"
+                   width="340"&gt;Scrutineer&lt;/td&gt;&lt;tr&gt;&lt;td
+                   class="t1b"&gt;&lt;/td&gt;&lt;td&gt;Benjamin Haut&lt;/td&gt;&lt;tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/
+                   tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/
+                   tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/
+                   tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/
+                   tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/tr&gt;&lt;/table&gt; &lt;br&gt; hosted on AWS
+                   &lt;table height="100"&gt;&lt;tr&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+                   &lt;/br&gt;&lt;/body&gt; &lt;/html&gt; })</code></pre>
+</blockquote>
+<hr>
+</section>
+<section id="get_scoresheet" class="level3">
+<h3 class="anchored" data-anchor-id="get_scoresheet">get_scoresheet</h3>
+<blockquote class="blockquote">
+<pre><code> get_scoresheet (data)</code></pre>
 </blockquote>
 
 

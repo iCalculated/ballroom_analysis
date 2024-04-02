@@ -31,5 +31,7 @@ d = { 'settings': { 'branch': 'main',
                                                                                                 'ballroom_analysis/scraping.py'),
                                             'ballroom_analysis.scraping.get_event_result': ( 'scraping.html#get_event_result',
                                                                                              'ballroom_analysis/scraping.py'),
+                                            'ballroom_analysis.scraping.get_scoresheet': ( 'scraping.html#get_scoresheet',
+                                                                                           'ballroom_analysis/scraping.py'),
                                             'ballroom_analysis.scraping.parse_event_name': ( 'scraping.html#parse_event_name',
                                                                                              'ballroom_analysis/scraping.py')}}}
