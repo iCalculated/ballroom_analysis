@@ -181,6 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#parse_event_name" id="toc-parse_event_name" class="nav-link active" data-scroll-target="#parse_event_name">parse_event_name</a></li>
   <li><a href="#event" id="toc-event" class="nav-link" data-scroll-target="#event">Event</a></li>
+  <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
   <li><a href="#get_event_list_html" id="toc-get_event_list_html" class="nav-link" data-scroll-target="#get_event_list_html">get_event_list_html</a></li>
   <li><a href="#get" id="toc-get" class="nav-link" data-scroll-target="#get">get</a></li>
   <li><a href="#extract_events_from_html" id="toc-extract_events_from_html" class="nav-link" data-scroll-target="#extract_events_from_html">extract_events_from_html</a></li>
@@ -231,8 +232,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="event" class="level3">
 <h3 class="anchored" data-anchor-id="event">Event</h3>
 <blockquote class="blockquote">
-<pre><code> Event (division:str, level:str, event:str, number:int)</code></pre>
+<pre><code> Event (division:str, level:str, event:str, number:int,
+        style:__main__.Style|None=None)</code></pre>
 </blockquote>
+<hr>
+</section>
+<section id="style" class="level3">
+<h3 class="anchored" data-anchor-id="style">Style</h3>
+<blockquote class="blockquote">
+<pre><code> Style (value, names=None, module=None, qualname=None, type=None, start=1)</code></pre>
+</blockquote>
+<p>An enumeration.</p>
 <hr>
 </section>
 <section id="get_event_list_html" class="level3">
@@ -283,14 +293,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <pre><code> extract_max_callbacks (soup:bs4.BeautifulSoup)</code></pre>
 </blockquote>
-<div id="cell-11" class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://results.o2cm.com/scoresheet3.asp?event=usa24&amp;heatid=40423019"</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Khalid Ali"</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>initial_res <span class="op">=</span> get(url)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(initial_res.content, <span class="st">"html.parser"</span>)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>extract_placement(soup, name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-12" class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://results.o2cm.com/scoresheet3.asp?event=usa24&amp;heatid=40423019"</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Khalid Ali"</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>initial_res <span class="op">=</span> get(url)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(initial_res.content, <span class="st">"html.parser"</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>extract_placement(soup, name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>3.5</code></pre>
 </div>
