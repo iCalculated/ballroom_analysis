@@ -1,0 +1,642 @@
+{
+    "keys": [
+        {
+            "level": "Bronze 1",
+            "division": "Amateur Collegiate",
+            "dances": "Rhythm",
+            "style": "None"
+        },
+        {
+            "level": "Bronze 1",
+            "division": "Amateur Adult",
+            "dances": "Rhythm",
+            "style": "None"
+        },
+        {
+            "level": "Bronze 1",
+            "division": "Amateur Collegiate",
+            "dances": "Smooth",
+            "style": "None"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "Standard",
+            "style": "None"
+        },
+        {
+            "level": "Championship",
+            "division": "Amateur Collegiate",
+            "dances": "Smooth",
+            "style": "None"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Adult",
+            "dances": "Rhythm",
+            "style": "None"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "Rhythm",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "Smooth",
+            "style": "None"
+        },
+        {
+            "level": "Bronze 1",
+            "division": "Amateur Adult",
+            "dances": "Smooth",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "Standard",
+            "style": "None"
+        },
+        {
+            "level": "Novice",
+            "division": "Amateur Adult",
+            "dances": "Intl. V. Waltz",
+            "style": "None"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "Smooth",
+            "style": "None"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Adult",
+            "dances": "Latin",
+            "style": "None"
+        },
+        {
+            "level": "Bronze 1",
+            "division": "Amateur Adult",
+            "dances": "Latin",
+            "style": "None"
+        },
+        {
+            "level": "Bronze 1",
+            "division": "Amateur Collegiate",
+            "dances": "Latin",
+            "style": "None"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Adult",
+            "dances": "Smooth",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "Latin",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "Latin",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "Rhythm",
+            "style": "None"
+        },
+        {
+            "level": "Bronze 1",
+            "division": "Amateur Adult",
+            "dances": "Standard",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "Intl. V. Waltz",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "Amer. Bolero",
+            "style": "None"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "Latin",
+            "style": "None"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Adult",
+            "dances": "Standard",
+            "style": "None"
+        },
+        {
+            "level": "All",
+            "division": "Amateur Adult",
+            "dances": "Syllabus Intl. Paso Doble",
+            "style": "None"
+        },
+        {
+            "level": "Novice",
+            "division": "Amateur Adult",
+            "dances": "Standard",
+            "style": "None"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Collegiate",
+            "dances": "Standard",
+            "style": "None"
+        },
+        {
+            "level": "Pre-Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "Latin",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "Standard",
+            "style": "None"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Collegiate",
+            "dances": "Smooth",
+            "style": "None"
+        },
+        {
+            "level": "Novice",
+            "division": "Amateur Adult",
+            "dances": "Smooth",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "Amer. Bolero",
+            "style": "None"
+        },
+        {
+            "level": "Novice",
+            "division": "Amateur Adult",
+            "dances": "Intl. Tango",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "Intl. Tango",
+            "style": "None"
+        },
+        {
+            "level": "All",
+            "division": "Amateur Collegiate",
+            "dances": "Syllabus Standard",
+            "style": "None"
+        },
+        {
+            "level": "Novice",
+            "division": "Amateur Collegiate",
+            "dances": "Standard",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "Intl. Jive",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "Smooth",
+            "style": "None"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Adult",
+            "dances": "Smooth",
+            "style": "None"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Adult",
+            "dances": "Intl. V. Waltz",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "Rhythm",
+            "style": "None"
+        },
+        {
+            "level": "Pre-Champ",
+            "division": "Amateur Adult",
+            "dances": "Smooth",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "Intl. Tango",
+            "style": "None"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Collegiate",
+            "dances": "Rhythm",
+            "style": "None"
+        },
+        {
+            "level": "Pre-Champ",
+            "division": "Amateur Adult",
+            "dances": "Standard",
+            "style": "None"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Adult",
+            "dances": "Standard",
+            "style": "None"
+        },
+        {
+            "level": "Pre-Bronze",
+            "division": "Amateur Adult",
+            "dances": "Latin",
+            "style": "None"
+        },
+        {
+            "level": "Novice",
+            "division": "Amateur Collegiate",
+            "dances": "Intl. Tango",
+            "style": "None"
+        },
+        {
+            "level": "Bronze 1",
+            "division": "Amateur Collegiate",
+            "dances": "Standard",
+            "style": "None"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "Intl. Jive",
+            "style": "None"
+        },
+        {
+            "level": "Pre",
+            "division": "Amateur Collegiate",
+            "dances": "Bronze 1 Latin",
+            "style": "None"
+        },
+        {
+            "level": "Pre-Champ",
+            "division": "Amateur Collegiate",
+            "dances": "Smooth",
+            "style": "None"
+        },
+        {
+            "level": "Pre-Champ",
+            "division": "Amateur Collegiate",
+            "dances": "Standard",
+            "style": "None"
+        }
+    ],
+    "values": [
+        {
+            "level": "Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "SB",
+            "style": "Style.RHYTHM"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Adult",
+            "dances": "SB",
+            "style": "Style.RHYTHM"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "F",
+            "style": "Style.SMOOTH"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "WQ",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Championship",
+            "division": "Amateur Collegiate",
+            "dances": "WTFV",
+            "style": "Style.SMOOTH"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Adult",
+            "dances": "CR",
+            "style": "Style.RHYTHM"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "CR",
+            "style": "Style.RHYTHM"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "WTF",
+            "style": "Style.SMOOTH"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Adult",
+            "dances": "F",
+            "style": "Style.SMOOTH"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "WFQ",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Novice",
+            "division": "Amateur Adult",
+            "dances": "V",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "WT",
+            "style": "Style.SMOOTH"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Adult",
+            "dances": "CR",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Adult",
+            "dances": "SJ",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "SJ",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Adult",
+            "dances": "WT",
+            "style": "Style.SMOOTH"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "SCR",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "SCR",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "CRS",
+            "style": "Style.RHYTHM"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Adult",
+            "dances": "TF",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "V",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "B",
+            "style": "Style.RHYTHM"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "CR",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Adult",
+            "dances": "WQ",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "All",
+            "division": "Amateur Adult",
+            "dances": "P",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Novice",
+            "division": "Amateur Adult",
+            "dances": "WFQ",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Collegiate",
+            "dances": "WTFQ",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Pre-Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "CR",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "WFQ",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Collegiate",
+            "dances": "Smooth",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Novice",
+            "division": "Amateur Adult",
+            "dances": "WTF",
+            "style": "Style.SMOOTH"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "B",
+            "style": "Style.RHYTHM"
+        },
+        {
+            "level": "Novice",
+            "division": "Amateur Adult",
+            "dances": "T",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "Intl. Tango",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Collegiate",
+            "dances": "V",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Novice",
+            "division": "Amateur Collegiate",
+            "dances": "WFQ",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "J",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "WTF",
+            "style": "Style.SMOOTH"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Adult",
+            "dances": "WTFV",
+            "style": "Style.SMOOTH"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Adult",
+            "dances": "V",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "CRS",
+            "style": "Style.RHYTHM"
+        },
+        {
+            "level": "Pre-Champ",
+            "division": "Amateur Adult",
+            "dances": "WTFV",
+            "style": "Style.SMOOTH"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Collegiate",
+            "dances": "T",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Collegiate",
+            "dances": "CRSB",
+            "style": "Style.RHYTHM"
+        },
+        {
+            "level": "Pre-Champ",
+            "division": "Amateur Adult",
+            "dances": "WTFQ",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Gold",
+            "division": "Amateur Adult",
+            "dances": "WTFQ",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Pre-Bronze",
+            "division": "Amateur Adult",
+            "dances": "CR",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Novice",
+            "division": "Amateur Collegiate",
+            "dances": "T",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "TF",
+            "style": "Style.STANDARD"
+        },
+        {
+            "level": "Silver",
+            "division": "Amateur Adult",
+            "dances": "J",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Pre-Bronze",
+            "division": "Amateur Collegiate",
+            "dances": "SJ",
+            "style": "Style.LATIN"
+        },
+        {
+            "level": "Pre-Champ",
+            "division": "Amateur Collegiate",
+            "dances": "WTFV",
+            "style": "Style.SMOOTH"
+        },
+        {
+            "level": "Pre-Champ",
+            "division": "Amateur Collegiate",
+            "dances": "WTFQ",
+            "style": "Style.STANDARD"
+        }
+    ]
+}
