@@ -134,7 +134,7 @@ def parse_event_name(event_name):
 
 event_names = ['9) Amateur Collegiate Gold Standard', '19) Amateur Collegiate Silver Rhythm', '4) Amateur Collegiate Gold Rhythm', '10) Amateur Adult Silver Rhythm', '2) Amateur Collegiate Silver Standard', '3) Amateur Collegiate Silver Intl. Tango', '4) Amateur Collegiate All Syllabus Standard', '10) Amateur Adult Silver Intl. V. Waltz', '3) Amateur Adult Silver Standard', '3) Amateur Adult Silver Intl. Tango', '11) Amateur Collegiate Silver Smooth', '2) Amateur Adult Gold Smooth', '1) Amateur Collegiate Gold Smooth', '6) Amateur Adult Novice Smooth', '23) Amateur Adult Silver Latin', '9) Amateur Collegiate Silver Latin', '8) Amateur Collegiate Bronze Latin', '15) Amateur Adult Bronze 1 Latin', '8) Amateur Adult Bronze Latin']
 for name in event_names:
-    print(parse_event_name(name))
+    print(repr(parse_event_name(name)))
 
 # %% ../nbs/02_scraping.ipynb 7
 o2cm_cache = {}
