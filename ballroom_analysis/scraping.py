@@ -270,7 +270,6 @@ def get_event_result(name: str, url: str, o2cm_cache=o2cm_cache) -> Result:
 
 
     base_url = "https://results.o2cm.com/scoresheet3.asp"
-    # CR shy: binary search eventually
     for selector in range(1, possible_callbacks + 1):
         data["selCount"] = selector
         if dumps(data) in o2cm_cache:
