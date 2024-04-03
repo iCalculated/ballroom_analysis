@@ -52,6 +52,8 @@ def make_augmentations(events: List[Event], urls: List[str] | None = None):
     for event, url in tqdm(zip(events, urls)):
         if event in event_metadata:
             continue
+        if event.style:
+            continue
         print(f"Event info: ({event.division}/{event.level}/{event.dances}) {url}")
         webbrowser.open(url)
 
@@ -81,7 +83,7 @@ def make_augmentations(events: List[Event], urls: List[str] | None = None):
         print(f"\t Correction: ({corrected_event.division}/{corrected_event.level}/{corrected_event.dances}/{corrected_event.style})")
         event_metadata[event] = corrected_event
         dump_event_metadata()
-
+    
 def dump_event_metadata(event_metadata):
     def event_to_dict(event: Event):
         return {
@@ -90,16 +92,18 @@ def dump_event_metadata(event_metadata):
             "dances": event.dances,
             "style": event.style.value if event.style else "none"
         }
-    d = {
-        "original_events": [event_to_dict(x) for x in event_metadata.keys()],
-        "augmented_events": [event_to_dict(x) for x in event_metadata.values()]
-    }
+    d = [
+        {
+            **event_to_dict(orig), "augmented": event_to_dict(aug)
+        }
+        for orig, aug in zip(event_metadata.keys(), event_metadata.values())
+    ]
     with open(METADATA_PICKLE, "w") as f:
         json.dump(d, f, indent=4)
 
 def load_event_metadata():
     with open(METADATA_PICKLE, "r") as f:
-        d = json.load(f)
+        l = json.load(f)
     def hydrate_style(style: str):
         if style == "none":
             return None
@@ -113,10 +117,12 @@ def load_event_metadata():
             return Style.STANDARD
         else:
             raise ValueError(f"Invalid style: {style}")
-
-    original_events = [Event(x["division"], x["level"], x["dances"], style=hydrate_style(x["style"])) for x in d["original_events"]]
-    augmented_events = [Event(x["division"], x["level"], x["dances"], style=hydrate_style(x["style"])) for x in d["augmented_events"]]
-    return {orig_event: augmented_event for orig_event, augmented_event in zip(original_events, augmented_events)}
+    
+    return {
+        Event(division=x["division"], level=x["level"], dances=x["dances"], style=hydrate_style(x["style"])): 
+        Event(division=x["augmented"]["division"], level=x["augmented"]["level"], dances=x["augmented"]["dances"], style=hydrate_style(x["augmented"]["style"]))
+        for x in l
+    }
 
 event_metadata = load_event_metadata()
 
