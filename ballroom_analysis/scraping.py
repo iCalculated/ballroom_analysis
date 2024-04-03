@@ -39,12 +39,9 @@ class Event(NamedTuple):
 
 
 # %% ../nbs/02_scraping.ipynb 5
-METADATA_PICKLE = "../data/event_metadata.pkl"
-event_metadata = {}
-try:
-    event_metadata = load(open(METADATA_PICKLE, "rb"))
-except FileNotFoundError:
-    pass
+import json
+
+METADATA_PICKLE = "../data/event_metadata.json"
 
 def make_augmentations(events: List[Event], urls: List[str] | None = None):
     import webbrowser
@@ -55,7 +52,7 @@ def make_augmentations(events: List[Event], urls: List[str] | None = None):
     for event, url in tqdm(zip(events, urls)):
         if event in event_metadata:
             continue
-        print(f"Event info: ({event.division}/{event.level}/{event.event}) {url}")
+        print(f"Event info: ({event.division}/{event.level}/{event.dances}) {url}")
         webbrowser.open(url)
 
         correction = input("Correction (div, level, event): ")
@@ -85,12 +82,44 @@ def make_augmentations(events: List[Event], urls: List[str] | None = None):
         event_metadata[event] = corrected_event
         dump_event_metadata()
 
-def dump_event_metadata(event_metadata=event_metadata):
-    dump(event_metadata, open(METADATA_PICKLE, "wb"))
+def dump_event_metadata(event_metadata):
+    def event_to_dict(event: Event):
+        return {
+            "division": event.division,
+            "level": event.level,
+            "dances": event.dances,
+            "style": event.style.value if event.style else "none"
+        }
+    d = {
+        "original_events": [event_to_dict(x) for x in event_metadata.keys()],
+        "augmented_events": [event_to_dict(x) for x in event_metadata.values()]
+    }
+    with open(METADATA_PICKLE, "w") as f:
+        json.dump(d, f, indent=4)
 
-def load_event_metadata(event_metadata=event_metadata):
-    event_metadata = load(open(METADATA_PICKLE, "rb"))
-    return event_metadata
+def load_event_metadata():
+    with open(METADATA_PICKLE, "r") as f:
+        d = json.load(f)
+    def hydrate_style(style: str):
+        if style == "none":
+            return None
+        elif style == "Rhythm":
+            return Style.RHYTHM
+        elif style == "Smooth":
+            return Style.SMOOTH
+        elif style == "Latin":
+            return Style.LATIN
+        elif style == "Standard":
+            return Style.STANDARD
+        else:
+            raise ValueError(f"Invalid style: {style}")
+
+    original_events = [Event(x["division"], x["level"], x["dances"], style=hydrate_style(x["style"])) for x in d["original_events"]]
+    augmented_events = [Event(x["division"], x["level"], x["dances"], style=hydrate_style(x["style"])) for x in d["augmented_events"]]
+    return {orig_event: augmented_event for orig_event, augmented_event in zip(original_events, augmented_events)}
+
+event_metadata = load_event_metadata()
+
 
 # %% ../nbs/02_scraping.ipynb 6
 def parse_event_name(event_name):
