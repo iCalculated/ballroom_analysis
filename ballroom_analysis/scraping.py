@@ -48,7 +48,7 @@ from pickle import dump, load
 import os
 
 o2cm_cache = {}
-CACHE_PICKLE = CACHE_PICKLE
+CACHE_PICKLE = "../data/o2cm_cache.pkl"
 if os.path.exists(CACHE_PICKLE):
     try:
         o2cm_cache = load(open(CACHE_PICKLE, "rb"))
