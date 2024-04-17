@@ -634,5 +634,245 @@
             "dances": "WTFQ",
             "style": "Standard"
         }
+    },
+    {
+        "division": "Amateur Collegiate",
+        "level": "Pre-Bronze",
+        "dances": "Smooth",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Collegiate",
+            "level": "Bronze",
+            "dances": "WT",
+            "style": "Smooth"
+        }
+    },
+    {
+        "division": "Amateur Adult",
+        "level": "Pre-Bronze",
+        "dances": "Standard",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Adult",
+            "level": "Bronze",
+            "dances": "WQ",
+            "style": "Standard"
+        }
+    },
+    {
+        "division": "Amateur Collegiate",
+        "level": "Newcomer 1",
+        "dances": "Smooth",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Collegiate",
+            "level": "Newcomer",
+            "dances": "F",
+            "style": "Smooth"
+        }
+    },
+    {
+        "division": "Amateur Adult",
+        "level": "Pre",
+        "dances": "Bronze 1 Smooth",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Adult",
+            "level": "Bronze",
+            "dances": "F",
+            "style": "Smooth"
+        }
+    },
+    {
+        "division": "Amateur Collegiate",
+        "level": "Pre",
+        "dances": "Bronze 1 Smooth",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Collegiate",
+            "level": "Bronze",
+            "dances": "F",
+            "style": "Smooth"
+        }
+    },
+    {
+        "division": "Amateur Collegiate",
+        "level": "Pre-Bronze",
+        "dances": "Standard",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Collegiate",
+            "level": "Bronze",
+            "dances": "WQ",
+            "style": "Standard"
+        }
+    },
+    {
+        "division": "Amateur Adult",
+        "level": "Newcomer 1",
+        "dances": "Smooth",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Adult",
+            "level": "Newcomer",
+            "dances": "F",
+            "style": "Smooth"
+        }
+    },
+    {
+        "division": "Amateur Collegiate",
+        "level": "Pre",
+        "dances": "Bronze 1 Rhythm",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Collegiate",
+            "level": "Bronze",
+            "dances": "SB",
+            "style": "Rhythm"
+        }
+    },
+    {
+        "division": "Amateur Adult",
+        "level": "Newcomer",
+        "dances": "Standard",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Adult",
+            "level": "Newcomer",
+            "dances": "WQ",
+            "style": "Standard"
+        }
+    },
+    {
+        "division": "Amateur Adult",
+        "level": "Pre-Bronze",
+        "dances": "Smooth",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Adult",
+            "level": "Bronze",
+            "dances": "WT",
+            "style": "Smooth"
+        }
+    },
+    {
+        "division": "Amateur Adult",
+        "level": "Newcomer",
+        "dances": "Rhythm",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Adult",
+            "level": "Newcomer",
+            "dances": "CR",
+            "style": "Rhythm"
+        }
+    },
+    {
+        "division": "Amateur Collegiate",
+        "level": "Newcomer",
+        "dances": "Rhythm",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Collegiate",
+            "level": "Newcomer",
+            "dances": "CR",
+            "style": "Rhythm"
+        }
+    },
+    {
+        "division": "Amateur Collegiate",
+        "level": "Newcomer",
+        "dances": "Standard",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Collegiate",
+            "level": "Newcomer",
+            "dances": "WQ",
+            "style": "Standard"
+        }
+    },
+    {
+        "division": "Amateur Collegiate",
+        "level": "Newcomer 1",
+        "dances": "Rhythm",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Collegiate",
+            "level": "Newcomer",
+            "dances": "SB",
+            "style": "Rhythm"
+        }
+    },
+    {
+        "division": "Amateur Adult",
+        "level": "Pre",
+        "dances": "Bronze 1 Rhythm",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Adult",
+            "level": "Bronze",
+            "dances": "SB",
+            "style": "Rhythm"
+        }
+    },
+    {
+        "division": "Amateur Adult",
+        "level": "Newcomer 1",
+        "dances": "Rhythm",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Adult",
+            "level": "Newcomer",
+            "dances": "SB",
+            "style": "Rhythm"
+        }
+    },
+    {
+        "division": "Amateur Adult",
+        "level": "Newcomer",
+        "dances": "Smooth",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Adult",
+            "level": "Newcomer",
+            "dances": "WT",
+            "style": "Smooth"
+        }
+    },
+    {
+        "division": "Amateur Collegiate",
+        "level": "Newcomer",
+        "dances": "Smooth",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Collegiate",
+            "level": "Newcomer",
+            "dances": "WT",
+            "style": "Smooth"
+        }
+    },
+    {
+        "division": "Amateur Adult",
+        "level": "Pre-Bronze",
+        "dances": "Rhythm",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Adult",
+            "level": "Bronze",
+            "dances": "CR",
+            "style": "Rhythm"
+        }
+    },
+    {
+        "division": "Amateur Collegiate",
+        "level": "Pre-Bronze",
+        "dances": "Rhythm",
+        "style": "none",
+        "augmented": {
+            "division": "Amateur Collegiate",
+            "level": "Bronze",
+            "dances": "CR",
+            "style": "Rhythm"
+        }
     }
 ]

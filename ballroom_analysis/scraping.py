@@ -82,7 +82,7 @@ def make_augmentations(events: List[Event], urls: List[str] | None = None):
             corrected_event = Event(division=event.division, level=event.level, dances=event.dances, style=style)
         print(f"\t Correction: ({corrected_event.division}/{corrected_event.level}/{corrected_event.dances}/{corrected_event.style})")
         event_metadata[event] = corrected_event
-        dump_event_metadata()
+        dump_event_metadata(event_metadata)
     
 def dump_event_metadata(event_metadata):
     def event_to_dict(event: Event):
